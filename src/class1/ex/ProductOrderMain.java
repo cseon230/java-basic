@@ -9,9 +9,17 @@ public class ProductOrderMain {
 
         ProductOrder po2 = new ProductOrder();
         po2.productName = "김치";
-        po2.
+        po2.price = 3000;
+        po2.quantity = 3;
 
+        int sum = 0;
 
+        ProductOrder[] productOrders = {po1, po2};
 
+        for (ProductOrder po : productOrders) {
+            sum += po.price * po.quantity;
+        }
+
+        System.out.println("총액 : " + sum);
     }
 }
